@@ -1,0 +1,49 @@
+body {
+  background: #242424;
+  color: white; }
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100vw;
+  font-size: 24px;
+  color: white;
+  background: #242424; }
+
+main .main_inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px; }
+  main .main_inner .answer {
+    font-size: 24px;
+    margin-bottom: 20px; }
+  main .main_inner .button {
+    margin-bottom: 50px; }
+  main .main_inner .squares {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    max-width: 500px; }
+    main .main_inner .squares .squares_square {
+      background: #242424;
+      height: 100px;
+      width: 30%;
+      margin: 5px;
+      max-width: 150px;
+      border-radius: 5px;
+      box-sizing: border-box;
+      border: 2px solid white;
+      cursor: pointer;
+      transition: 0.5s; }
+
+/*# sourceMappingURL=style.css.map */

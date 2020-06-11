@@ -1,0 +1,52 @@
+@mixin displayFlex($dir:row,$jus:center,$ali:center){
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction:$dir;
+    justify-content:$jus;
+    align-items:$ali;
+}
+
+body{
+    background:#242424;
+    color:white;
+}
+
+header{
+    @include displayFlex();
+    height:50px;
+    width:100vw;
+    font-size:24px;
+    color:white;
+    background:#242424;
+}
+main{
+    .main_inner{
+        @include displayFlex(column);
+        padding:50px;
+        .answer{
+            font-size:24px;
+            margin-bottom:20px;
+        }
+        .button{
+            margin-bottom:50px;
+        }
+        .squares{
+            @include displayFlex(row,flex-start);
+            width:80%;
+            max-width:500px;
+            // background:yellow;
+            .squares_square{
+                background:#242424;
+                height:100px;
+                width:30%;
+                margin:5px;
+                max-width:150px;
+                border-radius:5px;
+                box-sizing: border-box;
+                border:2px solid white;
+                cursor:pointer;
+                transition:0.5s;
+            }
+        }
+    }
+}
