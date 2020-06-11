@@ -1,7 +1,8 @@
 "use strict";
 var answerID = document.getElementsByClassName('answerID');
-var squares = document.getElementsByClassName('squares_square');
 var reflashID = document.getElementsByClassName('reflashID');
+var messageID = document.getElementsByClassName('messageID');
+var squares = document.getElementsByClassName('squares_square');
 var squares_bgColor;
 setTopic();
 reflashID[0].addEventListener('click', function () {
@@ -11,6 +12,7 @@ reflashID[0].addEventListener('click', function () {
 function setTopic() {
     //設置格子的顏色
     for (var i = 0; i < squares.length; i++) {
+        messageID[0].textContent = "請選擇正確的顏色";
         squares[i].style.opacity = '1';
         var color = void 0;
         var r = void 0, g = void 0, b = void 0;
@@ -32,6 +34,7 @@ function setTopic() {
                 finishGame(answerID[0].textContent);
             }
             else {
+                messageID[0].textContent = "答案不對哦! 請再試一次~";
                 console.log('No');
                 squares[i].style.opacity = '0';
             }
@@ -45,6 +48,7 @@ function setTopic() {
 //正確顏色填滿全部squares
 function finishGame(color) {
     for (var i = 0; i < squares.length; i++) {
+        messageID[0].textContent = "您答對了! 請按Reflash按鈕重新遊戲~";
         squares[i].style.opacity = '1';
         squares[i].style.background = color;
     }

@@ -22,18 +22,34 @@ main .main_inner {
   align-items: center;
   padding: 50px; }
   main .main_inner .answer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     font-size: 24px;
-    margin-bottom: 20px; }
-  main .main_inner .button {
     margin-bottom: 50px; }
+    main .main_inner .answer span {
+      margin-right: 10px; }
+  main .main_inner .message {
+    margin-bottom: 10px; }
+  main .main_inner .button {
+    width: 70%;
+    max-width: 480px;
+    margin-bottom: 50px; }
+    main .main_inner .button .reflashID {
+      width: 100%;
+      height: 48px;
+      cursor: pointer; }
   main .main_inner .squares {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 80%;
-    max-width: 500px; }
+    max-width: 500px;
+    margin-bottom: 30px; }
     main .main_inner .squares .squares_square {
       background: #242424;
       height: 100px;
@@ -45,5 +61,12 @@ main .main_inner {
       border: 2px solid white;
       cursor: pointer;
       transition: 0.5s; }
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */

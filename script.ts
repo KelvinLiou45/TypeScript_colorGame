@@ -1,7 +1,7 @@
 let answerID = document.getElementsByClassName('answerID') as HTMLCollectionOf<HTMLElement>;
-let squares = document.getElementsByClassName('squares_square') as HTMLCollectionOf<HTMLElement>;
 let reflashID = document.getElementsByClassName('reflashID') as HTMLCollectionOf<HTMLElement>;
-
+let messageID = document.getElementsByClassName('messageID') as HTMLCollectionOf<HTMLElement>;
+let squares = document.getElementsByClassName('squares_square') as HTMLCollectionOf<HTMLElement>;
 
 let squares_bgColor: string[];
 
@@ -17,6 +17,7 @@ reflashID[0].addEventListener('click',()=>{
 function setTopic(): void {
     //設置格子的顏色
     for (let i = 0; i < squares.length; i++) {
+        messageID[0].textContent = "請選擇正確的顏色";
         squares[i].style.opacity = '1';
         let color: string;
         let r, g, b: number;
@@ -42,6 +43,7 @@ function setTopic(): void {
                 finishGame(answerID[0].textContent);
             }
             else{
+                messageID[0].textContent = "答案不對哦! 請再試一次~";
                 console.log('No');
                 squares[i].style.opacity = '0';
             }
@@ -52,6 +54,7 @@ function setTopic(): void {
 //正確顏色填滿全部squares
 function finishGame(color:string):void{
     for(let i = 0;i<squares.length;i++){
+        messageID[0].textContent = "您答對了! 請按Reflash按鈕重新遊戲~";
         squares[i].style.opacity = '1';
         squares[i].style.background = color;
     }
